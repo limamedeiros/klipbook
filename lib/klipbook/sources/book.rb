@@ -26,7 +26,7 @@ module Klipbook
       if asin
         "[∞](kindle://book?action=open&asin=#{asin}&location=#{location})"
       else
-        ""
+        "loc #{location}"
       end
     end
 

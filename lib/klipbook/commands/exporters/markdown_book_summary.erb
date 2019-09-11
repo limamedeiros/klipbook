@@ -1,12 +1,12 @@
 # <%= title %>
-
 <% unless author.blank? %>
-*by <%= author %>*
+*<%= author %>*
 <% end %>
 
 <% sorted_clippings.each do |clipping| %>
-  <% unless clipping.text.blank? %>
-<%= clipping.text %> <%= location_markdown(clipping.location) %>
+<% unless clipping.text.blank? %>
+> <%= clipping.text %>
+<%= clipping.type %><% if clipping.location %> @ <%= location_markdown(clipping.location) %><% end %><% end %>
 
-  <% end %>
+
 <% end %>
